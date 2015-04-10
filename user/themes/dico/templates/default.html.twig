@@ -1,0 +1,15 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	<header id="header">
+		{% include 'partials/header.html.twig' %}
+	</header><!-- /header -->
+
+	<section id="content" class="row">
+		{% include 'partials/menu.html.twig' %}
+		<div class="large-12 columns">
+			{{ page.content }}	
+		</div>
+	</section>
+    
+{% endblock %}

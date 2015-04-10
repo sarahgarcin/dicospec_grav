@@ -1,0 +1,10 @@
+<nav class="menu-principal" role="navigation">
+  <ul>
+    {% for page in pages.children.visible %}
+      {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+      <li class="{{ page.title }}">
+        <a href="{{ page.url }}">{{ page.menu }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
