@@ -6890,6 +6890,9 @@ a {
 a:hover {
   color: #000; }
 
+p a:hover {
+  color: #00FF9A; }
+
 .row {
   max-width: 105rem; }
 
@@ -6944,7 +6947,7 @@ header {
       display: inline-block;
       vertical-align: top;
       position: absolute;
-      top: 0;
+      top: -25px;
       left: 0; }
     header.header-page .page-navigation {
       width: 100%; }
@@ -6959,15 +6962,17 @@ header {
     header .inner-header .description.page-description {
       display: inline-block; }
 
-#content {
-  vertical-align: top;
-  margin: 30px auto 0px auto;
-  width: 30%;
-  min-width: 300px; }
-  #content p {
-    font-size: 1.2em;
-    line-height: 1.4em;
-    text-align: justify; }
+.page-text {
+  border: 3px solid #00FF9A;
+  margin: 30px auto 60px auto;
+  width: 50%; }
+  .page-text .inner-text {
+    width: 70%;
+    margin: 50px auto; }
+    .page-text .inner-text p {
+      font-size: 1.5em;
+      line-height: 1.4em;
+      text-align: justify; }
 
 header.header-def {
   margin: 0px 70px;
@@ -6997,14 +7002,17 @@ header.header-def {
     -webkit-column-gap: 40px; }
 
 nav.definition-list {
-  margin: 0px 0px 50px 50px; }
+  margin: 0px 0px 50px 0px; }
   nav.definition-list ul {
-    list-style: none; }
+    list-style: none;
+    margin-left: 0px; }
     nav.definition-list ul li {
+      width: 18.4%;
       height: 220px;
       overflow: hidden;
       border: 3px solid #00FF9A;
       margin: 12px 12px;
+      padding: 10px 30px;
       float: none;
       display: inline-block;
       vertical-align: top; }
@@ -7040,7 +7048,7 @@ nav.definition-list {
   max-height: 600px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-left: 30px;
+  padding: 0px 30px 30px 30px;
   z-index: 101; }
   .ui-dialog header {
     margin: 0px 0px 0px 30px; }

@@ -1,6 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
+<div class="page row">
 	{% include 'partials/header.html.twig' %}
 <!-- 	<header id="header" class="header-page">
 		<div class="inner-header">
@@ -12,11 +13,10 @@
 				</nav>
 	  </div>
 	</header>-->
-
-	<section id="content" class="row">
-		<div class="large-12 columns">
-			{{ page.content }}	
-		</div>
-	</section>
-    
+	<div class="page-text">
+		<div class="inner-text">
+			{{ page.content }}
+		</div>	
+	</div>
+</div>
 {% endblock %}
