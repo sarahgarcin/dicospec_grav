@@ -1,0 +1,7 @@
+---
+title: Vidéo-Clips
+---
+
+**Spectateur-vidéo-clips**.A déserté les lieux culturels : ce n'est plus là que se produisent les meilleures danses. A troqué son abonnement-annuel-spectacle-vivant pour un abonnement à internet très haut débit qui lui donne accès à toutes les vidéo-clip de la terre. La scène ne pourra jamais faire aussi bien qu'un clip de Michael Jackson ou Madonna. Depuis qu'il a pris cette décision, se porte mieux et ne cesse de danser dans son salon. 
+
+ ![bouh](/content/images/04.png)

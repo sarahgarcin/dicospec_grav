@@ -25,9 +25,11 @@ $vert: #00FF9A;
 
 body {
   font-family: "EB Garamond", serif;
-  margin: 30px;
+  margin: 0px 0px 50px 0px;
   background-color: $background;
   color:$text;
+  width: 100%;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -45,14 +47,103 @@ a:hover {
   color: #000;
 }
 
+.row{
+    max-width: 105rem; 
+}
+
 // HOME
-header {
-  &.row{
-    width: 30%;
-    min-width: 300px;
-    margin: -28px 0px 0px 10%;
+.home{
+  .home-content {
+    width: 70%;
+    margin:auto;
+  }
+
+  .home-left{
+    width:40%;
     display: inline-block;
     vertical-align: top;
+    #header{
+      .home-title{
+        margin: auto;
+        a{
+          border:none;
+        }
+      }
+    }
+  }
+
+  .home-right{
+    width:59%;
+    display: inline-block;
+    vertical-align: top;
+    .home-text{
+      margin: 45px 0px 50px 10%;
+      p{
+        font-weight: bold;
+        line-height: 1.3em;
+        font-size: 2.3em;
+        letter-spacing: 0.02em;
+      }
+      
+    }
+
+  }
+
+  // .home-right{
+  //   margin-top: 60px;
+    
+  // }
+}
+
+.menu-principal {
+  margin: 30px 45px;
+  text-align: center;
+  li{
+    display: inline-block;
+    font-size: 1.5em;
+    color: $text;
+    margin-right: 25px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    a {
+      color: $text;
+      border: 3px solid $vert;
+      padding: 10px 25px;
+      &:hover{
+        box-shadow:  0px 0px 30px $rose;
+      }
+      &.active{
+        box-shadow:  0px 0px 30px $rose;
+      }
+    }
+  }
+}
+
+// PAGE STATIC
+header {
+  // &.row{
+  //   width: 30%;
+  //   min-width: 300px;
+  //   margin: -28px 0px 0px 10%;
+  //   display: inline-block;
+  //   vertical-align: top;
+  // }
+  position: relative;
+  &.header-page{
+    margin: 30px 0px 100px 0px;
+    .page-title{
+      width: 100px;
+      // min-width: 200px;
+      display: inline-block;
+      vertical-align: top;
+      position: absolute;
+      top:0;
+      left:0;
+    }
+    .page-navigation{
+      // display: inline-block;
+      width: 100%;
+    }
   }
   .inner-header{
     .title {  
@@ -75,9 +166,9 @@ header {
 }
 
 #content {
-  display: inline-block;
+  // display: inline-block;
   vertical-align: top;
-  margin: 30px 0px 0px 0px;
+  margin: 30px auto 0px auto;
   width: 30%;
   min-width: 300px;
   p{
@@ -86,32 +177,43 @@ header {
     text-align: justify;
   }
 
-  .menu-principal {
-    margin-bottom: 30px;
-    li{
-      display: inline-block;
-      padding-right: 30px;
-      font-size: 1.8em;
-      color: $text;
-      a {
-        color: $text;
-        border: 3px solid $vert;
-        padding: 5px 10px;
-        &:hover{
-          box-shadow:  0px 0px 30px $rose;
-        }
-      }
-    }
-  }
+  // .menu-principal {
+  //   margin-bottom: 30px;
+  //   li{
+  //     display: inline-block;
+  //     padding-right: 30px;
+  //     font-size: 1.8em;
+  //     color: $text;
+  //     a {
+  //       color: $text;
+  //       border: 3px solid $vert;
+  //       padding: 5px 10px;
+  //       &:hover{
+  //         box-shadow:  0px 0px 30px $rose;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 // PAGE DEFINITION
 header {
   &.header-def {
-    width:10%;
-    min-width: 100px;
-    display: inline-block;
-    margin: 0px 0px 40px 130px;
+    margin: 0px 70px;
+    width: 100%;
+    .title{
+      width:20%;
+      min-width: 200px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .description{
+      width: 70%;
+      min-width: 200px;
+      vertical-align: top;
+      display: inline-block;
+      margin-left: 50px;
+    }
   }
 }
 
@@ -137,13 +239,18 @@ nav.definition-list {
   ul {
     list-style: none;
     li{
-      min-height: 230px;
-      max-height: 350px;
+      height: 220px;
+      overflow: hidden;
+      // height: auto;
       border: 3px solid $vert;
-      padding-top: 10px;
       margin: 12px 12px;
+      // text-align: center;
+      float:none;
+      display: inline-block;
+      vertical-align: top;
       &.letter {
-        font-size: 8em;
+        font-size: 7.2em;
+        // height: 60px;
         padding-top: 0px;
         text-align: center;
         color:$vert;
@@ -155,6 +262,10 @@ nav.definition-list {
       &:hover{
         box-shadow: 0px 0px 30px $rose;
       }
+      a{
+        padding-top: 10px;
+        width: 100%;
+      }
       h3{
         font-size: 1.8em;
         color: $text;
@@ -163,6 +274,13 @@ nav.definition-list {
         color: $text;
         font-size: 1.2em;
         line-height: 1.4em;
+        // display: none;
+        // position: absolute;
+        // background: #fff;
+        // border: 3px solid $vert;
+        // padding: 10px 20px;
+        // z-index: 99;
+        text-align: left;
       }
     }
   }
@@ -182,6 +300,7 @@ nav.definition-list {
   overflow-y: auto;
   overflow-x:hidden;
   padding-left: 30px;
+  z-index: 101;
 
   header{
     margin: 0px 0px 0px 30px;

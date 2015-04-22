@@ -1,0 +1,15 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %} 
+  <header id="header">
+    <div class="def-title">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </header><!-- /header#header -->
+
+  <section id="content" class="content-page">
+    <div class="content-def">
+      {{ page.content }}
+    </div>
+  </section> <!-- /section#content -->
+{% endblock %}

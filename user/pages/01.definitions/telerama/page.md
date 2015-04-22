@@ -1,0 +1,7 @@
+---
+title: Telerama
+---
+
+**Spectateur-Télérama**. Croit tout savoir sur le spectacle. Déblatère après la représentation, non pour traduire sa réception personnelle, mais pour restituer à ses interlocuteurs les critiques de son hebdo préféré — oubliant les siennes au passage.  
+
+ ![amour](/content/images/01.png)

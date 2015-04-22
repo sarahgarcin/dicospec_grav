@@ -1,0 +1,7 @@
+---
+title: Ronchon
+---
+
+**Spectateur-ronchon**. Aime le spectacle, mais de loin. Faut pas pousser mémé dans les orties. Ceux qui sacralisent l’énervent — ils n’ont pas le monopole du regard. Ne va pas se gêner pour l’écrire haut et fort. Ce n’est pas un spectacle qui va changer la face du monde. Encore moins la sienne. Quand ne l’écrit pas, le dit de sa voix brève et catarrheuse. 
+
+ ![bouh](/content/images/04.png)

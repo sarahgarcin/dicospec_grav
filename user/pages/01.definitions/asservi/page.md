@@ -1,0 +1,8 @@
+---
+title: Asservi
+---
+ 
+**Spectateur-asservi**. N’existe que par ce spectacle. Cesse ses activités pour suivre la totalité de la tournée. Sa vie se soumet au spectacle. Son existence est minée par ce spectacle. Ses goûts et ses jugements, il les doit au spectacle. Ses amis comme ses ennemis, il les doit à l’opinion qu’ils se sont faite sur le spectacle. À vrai dire, sa vie ne tient qu'au fil de ce spectacle. Sa vie ne tient qu’à un fil. 
+
+
+[bibliothèque](http://dicospec.g-u-i.net/about)

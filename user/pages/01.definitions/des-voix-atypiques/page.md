@@ -1,0 +1,7 @@
+---
+title: Des voix atypiques
+---
+
+**Spectateur-des-voix-atypiques**. La voix de la chanteuse lui en rappelle d’autres. Des voix atypiques. En dehors des canons de la beauté. Des voix rauques. Pas vraiment belles. Des voix de chèvres. Des voix lointaines. Du fond des temps. Qui chantent autrement. Les listes et tente de les (d)écrire, de les dessiner. D’en rendre leur corporéité. Leur phonétique. Leur tonicité. Leur dissonance.  
+
+ ![bouh](/content/images/04.png)
