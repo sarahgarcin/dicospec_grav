@@ -1,4 +1,6 @@
 /logs/*
 /cache/*
 /images/*
+/assets/*
 /user/pages/*
+/user/data/*
