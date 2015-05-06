@@ -1,5 +1,0 @@
----
-title: Alors
----
-
-**Spectateur-alors**. A la facheuse manie de briser ce délicieux instant de silence qui succède au clap final. Ça se passe en général dès la sortie de salle, en descendant les marches du Théâtre. Subrepticement, glissera à son compagnon du soir un : *Alors ?* 

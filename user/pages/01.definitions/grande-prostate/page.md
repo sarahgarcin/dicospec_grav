@@ -1,6 +1,0 @@
----
-title: Grande prostate
----
-
-![assidu](/content/images/03.png)
-**Spectateur-grande-prostate**. Prend toujours les devant avant les trois coups, mais cette prévention ne suffit pas lorsque le spectacle dépasse le format habituel des 90 minutes. Dès lors, ne peut s'empêcher, en cours de représentation, de se lever et traverser toute sa rangée en disant "PARDON, PARDON, MERCI, EXCUSEZ-MOI, PARDON, PARDON". À l'aller. Et au retour.

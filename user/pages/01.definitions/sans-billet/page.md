@@ -1,7 +1,0 @@
----
-title: Sans billet
----
-
- ![assidu](/content/images/03.png)
- 
-**Spectateur-sans-billet**. N'a pas anticipé le succès du spectacle. S'est retrouvé à la porte du Théâtre sans le sésame. S'est présenté devant avec un panneau "CHERCHE 2 PLACES POUR...". Sans succès. A fini par dîner dans la brasserie d'à-côté. C'était pas mal non plus. 

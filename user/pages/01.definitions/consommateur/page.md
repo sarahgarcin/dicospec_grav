@@ -1,8 +1,0 @@
----
-title: Consommateur
----
-
-**Spectateur-consommateur**. Connait déjà les spectacles qu’il souhaite rencontrer : les logiciels de recommandation - les fameux algorithmes des réseaux sociaux - travaillent pour lui. Pour peu que le spectateur-consommateur ait vu une fois un spectacle de danse, qu’il se rassure : on ne lui recommandera jamais de cirque ni de théâtre, encore moins des spectacles de rue. Le même, jusqu’au bout de la nuit.
-
- 
- ***

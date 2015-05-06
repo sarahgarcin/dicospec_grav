@@ -1,5 +1,0 @@
----
-title: Lacrymal
----
-
-**Spectateur-lacrymal.** C’est merveilleux. Ce spectacle a été conçu pour lui. L’histoire du spectacle est son histoire émotionnelle. En pleure. A chaque scène c’est la même chose : les larmes ne cessent. C’est pas possible. Comment les artistes ont-ils su ? 

@@ -1,7 +1,0 @@
----
-title: Scructateur
----
-
-**Spectateur-scructateur**. Examine la part d’ombre des performeurs. Le ventre qui dépasse. La braguette qui descend. Les auréoles sous les bras. La nuque tendue. Les bras mous. Le souffle court. Le regard absent. La lassitude. Le désoeuvre. 
-
- ![bouh](/content/images/04.png)
