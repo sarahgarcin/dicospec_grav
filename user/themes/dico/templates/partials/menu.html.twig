@@ -4,6 +4,17 @@
       {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
       <li class="{{ page.title }}">
         <a href="{{ page.url }}">{{ page.menu }}</a>
+        {% if page.children is not empty %}
+        	{% if page.title is not sameas("Définitions") %}
+            <ul class="submenu">
+            {% for child in page.children %}
+                <li class="submenu-list">
+                	<a href="{{ child.url }}">{{ child.menu }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

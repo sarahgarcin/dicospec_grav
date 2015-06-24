@@ -4,6 +4,10 @@ $(document).ready(function(){
 	var $popWidth = $(window).width() / 4	;
 	var $definition = $('.definition-list li a');
 
+	// variables pour l'ouverture d'une pop up dans les pages textes
+	var $dialogText = $('#dialog-text');
+	var $elementClick = $(".page-text .inner-text").find("[title='definition']");
+
 	// Display definition excerpt when hover definition name
 	// $definition.mouseenter(function(){
 	// 	$(this).children("p").show();
@@ -11,6 +15,39 @@ $(document).ready(function(){
 	// $definition.mouseleave(function(){
 	// 	$(this).children("p").hide();
 	// });
+
+	initEvents();
+
+	function initEvents(){
+
+		$definition.on('click', function(e) {
+			//open pop on definition click
+			OpenPopup($(this).attr('href'), $(this));
+			return false;
+		});
+
+		$elementClick.on('click', function(e) {
+			//open pop on definition click In text pge
+			OpenPopupInTextPage($(this).attr('href'), $(this));
+			return false;
+		});
+
+		
+		$(".menu-principal li a").each(function(){
+			//Active menu
+			 if(this.href == window.location.href){
+			 	$(this).addClass("active");
+			 }
+		});
+
+		// $(".menu-principal li a").mouseenter(function(){
+
+		// 	$(this).parent().children(".submenu").slideDown("fast");
+		// });
+		// $(".menu-principal li a").mouseleave(function(){
+		// 	$(this).parent().children(".submenu").slideUp("fast");
+		// });
+	}
 
 
 	// Open definition 
@@ -34,24 +71,29 @@ $(document).ready(function(){
         $dialog.dialog("close");
     	}
 		});
-	}               
-	
-	$definition.on('click', function(e) {
-		OpenPopup($(this).attr('href'), $(this));
-		return false;
-	});
+	}    
 
-	// $(".definition-list").packery({
- //  	itemSelector: '.item',
- //  	gutter: 10
-	// });
 
-	//Active menu
-	$(".menu-principal li a").each(function(){
-		 if(this.href == window.location.href){
-		 	$(this).addClass("active");
-		 }
+	// Open definition in text page 
+	function OpenPopupInTextPage($link, $this) {
+		$dialogText.dialog({
+    	autoOpen: false,
+    	appendTo: ".container",
+    	position: { my: "right-30", at: "right", of: window },
+    	closeText: "x",
+    	modal: true,
+    	width: $popWidth,
+	 	});
+	 	$dialogText.load($link + " .container");
+		$dialogText.dialog('open');
 
-	});
+
+		//Close Pop when click outside
+		$('body').on('mousedown', function (e){
+    	if (!$dialogText.is(e.target) && $dialogText.has(e.target).length === 0){
+        $dialogText.dialog("close");
+    	}
+		});
+	}            
 
 });

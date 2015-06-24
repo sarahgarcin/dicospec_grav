@@ -101,6 +101,7 @@ p{
   // }
 }
 
+
 .menu-principal {
   margin: 30px 45px;
   text-align: center;
@@ -122,7 +123,34 @@ p{
         box-shadow:  0px 0px 30px $rose;
       }
     }
+    .submenu {
+      position:absolute;
+      z-index: 999;
+      margin: 10px 0 0 0;
+      display: none;
+      li{
+        a{
+          //border:none;
+          background-color: $vert;
+          //width: 10vw;
+          font-size: 1.2rem;
+          &:hover{
+            //box-shadow: 0px 0px 30px $rose;
+            //box-shadow:  none;
+            //color: $rose;
+            //text-decoration: underline;
+          }
+          &.active{
+            box-shadow: 0px 0px 30px $rose;
+          }
+        }
+      }
+    }
   }
+}
+
+.menu-principal li:hover ul {
+    display: block;
 }
 
 // PAGE STATIC
@@ -175,9 +203,9 @@ header {
   // display: inline-block;
   border: 3px solid $vert;
   margin: 30px auto 60px auto;
-  width: 50%;
+  width: 60%;
   .inner-text{
-    width: 70%;
+    width: 75%;
     margin: 50px auto;
     p{
       font-size: 1.5em;
@@ -185,25 +213,21 @@ header {
       text-align: justify;
     }
   }
+}
 
-
-  // .menu-principal {
-  //   margin-bottom: 30px;
-  //   li{
-  //     display: inline-block;
-  //     padding-right: 30px;
-  //     font-size: 1.8em;
-  //     color: $text;
-  //     a {
-  //       color: $text;
-  //       border: 3px solid $vert;
-  //       padding: 5px 10px;
-  //       &:hover{
-  //         box-shadow:  0px 0px 30px $rose;
-  //       }
-  //     }
-  //   }
-  // }
+.credits.effluves{
+  border: 3px solid $vert;
+  margin: 30px auto 60px auto;
+  width: 60%;
+  .credits-text{
+    width: 75%;
+    margin: 50px auto;
+    p{
+      font-size: 1.5em;
+      line-height: 1.4em;
+      text-align: justify;
+    }
+  }
 }
 
 // PAGE DEFINITION
@@ -246,6 +270,15 @@ header {
 
 nav.definition-list {
   margin:0px 0px 50px 0px;
+  &.effluves{
+    width:61.5%;
+    margin:auto;
+    li{
+      width: 31%;
+      // margin-left: 0px;
+      // margin-right: 24px;
+    }
+  }
   ul {
     list-style: none;
     margin-left: 0px;
@@ -337,13 +370,19 @@ nav.definition-list {
 
   }
 
+  .ui-dialog-titlebar{
+    position: relative;
+  }
+
   .ui-button{
     border:none;
     background-color: $rose;
     padding: 4px 15px;
     position: absolute;
-    right:0;
+    top: 0px;
+    right: 0px;
     outline: none;
+    z-index: 100;
   }
 }
 

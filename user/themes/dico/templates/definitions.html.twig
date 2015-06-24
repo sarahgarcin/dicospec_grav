@@ -2,23 +2,10 @@
 
 {% block content %}
 <div class="page row">
-<!--   <header id="header" class="row header-def">
-  	<div class="inner-header">
-		  <div class="title page-title">
-	      <a href="{{ base_url == '' ? '/' : base_url }}"><img src="{{ theme_url }}/images/title.png" alt="title"></a>
-	    </div>
-      <nav class="page-navigation">
-        x {% include 'partials/menu.html.twig' %}
-      </nav>
-	    <div class="description">
-        <p>{{ page.content }}</p>
-      </div>
-	   </div>
-  </header>-->
   {% include 'partials/header.html.twig' %}
   <div id="dialog"></div>
     <nav class="definition-list">
-       {{alphabetical}}
+       {{definition}}
     </nav> 
 </div> 
 {% endblock %}

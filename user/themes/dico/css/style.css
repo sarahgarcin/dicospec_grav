@@ -6937,6 +6937,19 @@ p a:hover {
         box-shadow: 0px 0px 30px #FF2E74; }
       .menu-principal li a.active {
         box-shadow: 0px 0px 30px #FF2E74; }
+    .menu-principal li .submenu {
+      position: absolute;
+      z-index: 999;
+      margin: 10px 0 0 0;
+      display: none; }
+      .menu-principal li .submenu li a {
+        background-color: #00FF9A;
+        font-size: 1.2rem; }
+        .menu-principal li .submenu li a.active {
+          box-shadow: 0px 0px 30px #FF2E74; }
+
+.menu-principal li:hover ul {
+  display: block; }
 
 header {
   position: relative; }
@@ -6965,11 +6978,23 @@ header {
 .page-text {
   border: 3px solid #00FF9A;
   margin: 30px auto 60px auto;
-  width: 50%; }
+  width: 60%; }
   .page-text .inner-text {
-    width: 70%;
+    width: 75%;
     margin: 50px auto; }
     .page-text .inner-text p {
+      font-size: 1.5em;
+      line-height: 1.4em;
+      text-align: justify; }
+
+.credits.effluves {
+  border: 3px solid #00FF9A;
+  margin: 30px auto 60px auto;
+  width: 60%; }
+  .credits.effluves .credits-text {
+    width: 75%;
+    margin: 50px auto; }
+    .credits.effluves .credits-text p {
       font-size: 1.5em;
       line-height: 1.4em;
       text-align: justify; }
@@ -7003,6 +7028,11 @@ header.header-def {
 
 nav.definition-list {
   margin: 0px 0px 50px 0px; }
+  nav.definition-list.effluves {
+    width: 61.5%;
+    margin: auto; }
+    nav.definition-list.effluves li {
+      width: 31%; }
   nav.definition-list ul {
     list-style: none;
     margin-left: 0px; }
@@ -7065,13 +7095,17 @@ nav.definition-list {
       width: 95%; }
     .ui-dialog #content img {
       width: 95%; }
+  .ui-dialog .ui-dialog-titlebar {
+    position: relative; }
   .ui-dialog .ui-button {
     border: none;
     background-color: #FF2E74;
     padding: 4px 15px;
     position: absolute;
-    right: 0;
-    outline: none; }
+    top: 0px;
+    right: 0px;
+    outline: none;
+    z-index: 100; }
 
 footer.row {
   margin-left: 10%; }
