@@ -6894,59 +6894,64 @@ p a:hover {
   color: #00FF9A; }
 
 .row {
-  max-width: 105rem; }
+  max-width: 85%; }
+
+.grid-container {
+  width: 85%;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 7.5%;
+  border: 5px solid orange;
+  opacity: 0.5;
+  height: 4000px;
+  z-index: -1; }
+
+.grid {
+  height: 2000px;
+  border-right: 3px solid green; }
 
 .home .home-content {
-  width: 70%;
+  width: 82.5%;
   margin: auto; }
-.home .home-left {
-  width: 40%;
-  display: inline-block;
-  vertical-align: top; }
-  .home .home-left #header .home-title {
-    margin: auto; }
-    .home .home-left #header .home-title a {
-      border: none; }
-.home .home-right {
-  width: 59%;
-  display: inline-block;
-  vertical-align: top; }
-  .home .home-right .home-text {
-    margin: 45px 0px 50px 10%; }
-    .home .home-right .home-text p {
-      font-weight: bold;
-      line-height: 1.3em;
-      font-size: 2.3em;
-      letter-spacing: 0.02em; }
+.home .home-left #header .home-title {
+  margin: auto; }
+  .home .home-left #header .home-title a {
+    border: none; }
+.home .home-right .home-text {
+  margin: 55px 0px 30px 5%; }
+  .home .home-right .home-text p {
+    font-weight: bold;
+    line-height: 1.3em;
+    font-size: 2.3em;
+    letter-spacing: 0.02em; }
 
-.menu-principal {
-  margin: 30px 45px;
-  text-align: center; }
-  .menu-principal li {
-    display: inline-block;
+.menu-principal ul {
+  margin-left: 17.4%;
+  padding: 20px 0px 20px 0px; }
+  .menu-principal ul li {
     font-size: 1.5em;
     color: #0000D2;
-    margin-right: 25px;
     font-weight: bold;
     letter-spacing: 0.1em; }
-    .menu-principal li a {
+    .menu-principal ul li:hover {
+      box-shadow: 0px 0px 30px #FF2E74; }
+    .menu-principal ul li.active {
+      box-shadow: 0px 0px 30px #FF2E74; }
+    .menu-principal ul li a {
       color: #0000D2;
       border: 3px solid #00FF9A;
       padding: 10px 25px; }
-      .menu-principal li a:hover {
+  .menu-principal ul .submenu {
+    position: absolute;
+    z-index: 999;
+    margin: 0 0 0 0;
+    display: none; }
+    .menu-principal ul .submenu li a {
+      background-color: #00FF9A;
+      font-size: 1.2rem; }
+      .menu-principal ul .submenu li a.active {
         box-shadow: 0px 0px 30px #FF2E74; }
-      .menu-principal li a.active {
-        box-shadow: 0px 0px 30px #FF2E74; }
-    .menu-principal li .submenu {
-      position: absolute;
-      z-index: 999;
-      margin: 10px 0 0 0;
-      display: none; }
-      .menu-principal li .submenu li a {
-        background-color: #00FF9A;
-        font-size: 1.2rem; }
-        .menu-principal li .submenu li a.active {
-          box-shadow: 0px 0px 30px #FF2E74; }
 
 .menu-principal li:hover ul {
   display: block; }
@@ -6954,14 +6959,7 @@ p a:hover {
 header {
   position: relative; }
   header.header-page {
-    margin: 30px 0px 100px 0px; }
-    header.header-page .page-title {
-      width: 100px;
-      display: inline-block;
-      vertical-align: top;
-      position: absolute;
-      top: -25px;
-      left: 0; }
+    margin: 0px 0px 3rem 0px; }
     header.header-page .page-navigation {
       width: 100%; }
   header .inner-header .title a {
@@ -6977,8 +6975,8 @@ header {
 
 .page-text {
   border: 3px solid #00FF9A;
-  margin: 30px auto 60px auto;
-  width: 60%; }
+  margin: 10px auto 60px auto;
+  width: 66.66667%; }
   .page-text .inner-text {
     width: 75%;
     margin: 50px auto; }
@@ -6990,7 +6988,7 @@ header {
 .credits.effluves {
   border: 3px solid #00FF9A;
   margin: 30px auto 60px auto;
-  width: 60%; }
+  width: 66.666667%; }
   .credits.effluves .credits-text {
     width: 75%;
     margin: 50px auto; }
@@ -7029,7 +7027,7 @@ header.header-def {
 nav.definition-list {
   margin: 0px 0px 50px 0px; }
   nav.definition-list.effluves {
-    width: 61.5%;
+    width: 66.66667%;
     margin: auto; }
     nav.definition-list.effluves li {
       width: 31%; }

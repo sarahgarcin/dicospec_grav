@@ -1,5 +1,5 @@
 <nav class="menu-principal" role="navigation">
-  <ul>
+  <ul class="inline-list">
     {% for page in pages.children.visible %}
       {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
       <li class="{{ page.title }}">

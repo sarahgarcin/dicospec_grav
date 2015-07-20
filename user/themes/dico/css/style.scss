@@ -54,36 +54,46 @@ p{
 }
 
 .row{
-    max-width: 105rem; 
+  max-width: 85%;
+}
+
+.grid-container{
+  width: 85%;
+  margin:auto;
+  position: fixed;
+  top:0;
+  left:7.5%;
+  border: 5px solid orange;
+  opacity: 0.5;
+  height: 4000px;
+  z-index: -1;
+  // display: none;
+}
+
+.grid{
+  height:2000px;
+  border-right: 3px solid green;
 }
 
 // HOME
 .home{
   .home-content {
-    width: 70%;
+    width: 82.5%;
     margin:auto;
   }
 
   .home-left{
-    width:40%;
-    display: inline-block;
-    vertical-align: top;
     #header{
       .home-title{
         margin: auto;
-        a{
-          border:none;
-        }
+        a{ border:none;}
       }
     }
   }
 
   .home-right{
-    width:59%;
-    display: inline-block;
-    vertical-align: top;
     .home-text{
-      margin: 45px 0px 50px 10%;
+      margin: 55px 0px 30px 5%;
       p{
         font-weight: bold;
         line-height: 1.3em;
@@ -103,30 +113,31 @@ p{
 
 
 .menu-principal {
-  margin: 30px 45px;
-  text-align: center;
-  li{
-    display: inline-block;
+  ul{
+    margin-left: 17.4%;
+    padding: 20px 0px 20px 0px;
+    li{
     font-size: 1.5em;
     color: $text;
-    margin-right: 25px;
     font-weight: bold;
     letter-spacing: 0.1em;
+    &:hover{
+      box-shadow:  0px 0px 30px $rose;
+    }
+    &.active{
+      box-shadow:  0px 0px 30px $rose;
+    } 
     a {
       color: $text;
       border: 3px solid $vert;
       padding: 10px 25px;
-      &:hover{
-        box-shadow:  0px 0px 30px $rose;
-      }
-      &.active{
-        box-shadow:  0px 0px 30px $rose;
-      }
     }
+  }
+  
     .submenu {
       position:absolute;
       z-index: 999;
-      margin: 10px 0 0 0;
+      margin: 0 0 0 0;
       display: none;
       li{
         a{
@@ -155,24 +166,11 @@ p{
 
 // PAGE STATIC
 header {
-  // &.row{
-  //   width: 30%;
-  //   min-width: 300px;
-  //   margin: -28px 0px 0px 10%;
-  //   display: inline-block;
-  //   vertical-align: top;
-  // }
   position: relative;
   &.header-page{
-    margin: 30px 0px 100px 0px;
+    margin: 0px 0px 3rem 0px;
     .page-title{
-      width: 100px;
-      // min-width: 200px;
-      display: inline-block;
-      vertical-align: top;
-      position: absolute;
-      top:-25px;
-      left:0;
+      //top:-25px;
     }
     .page-navigation{
       // display: inline-block;
@@ -200,10 +198,9 @@ header {
 }
 
 .page-text {
-  // display: inline-block;
   border: 3px solid $vert;
-  margin: 30px auto 60px auto;
-  width: 60%;
+  margin: 10px auto 60px auto;
+  width: 66.66667%;
   .inner-text{
     width: 75%;
     margin: 50px auto;
@@ -218,7 +215,7 @@ header {
 .credits.effluves{
   border: 3px solid $vert;
   margin: 30px auto 60px auto;
-  width: 60%;
+  width: 66.666667%;
   .credits-text{
     width: 75%;
     margin: 50px auto;
@@ -271,7 +268,7 @@ header {
 nav.definition-list {
   margin:0px 0px 50px 0px;
   &.effluves{
-    width:61.5%;
+    width:66.66667%;
     margin:auto;
     li{
       width: 31%;
