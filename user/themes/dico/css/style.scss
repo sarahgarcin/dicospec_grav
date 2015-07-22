@@ -23,6 +23,17 @@ $blanc : #FFF;
 $rose: #FF2E74;
 $vert: #00FF9A;
 
+.tooltip-definition{
+  margin:8px;
+  padding:1rem 2rem;
+  width: 20%;
+  position:absolute;
+  background-color: #FFF;
+  color: $text;
+  border: 3px solid $vert;
+  z-index: 2;
+}
+
 body {
   font-family: "EB Garamond", serif;
   margin: 0px 0px 50px 0px;
@@ -258,12 +269,7 @@ header {
   //div qui affiche les définitions au survol
   #ajax-wrap{
     display: none; 
-    width: 40%;
-    position:absolute;
-    background-color: #FFF;
-    color: $text;
-    border: 3px solid $vert;
-  } 
+  }
   .inner-text{
     width: 75%;
     margin: 50px auto;

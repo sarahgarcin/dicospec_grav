@@ -33,27 +33,22 @@ $(document).ready(function(){
 		// });
 
 		$elementClick.each(function(e){
-			console.log($(this));
-		});
-
-		$elementClick.hover(function(e){
-			e.preventDefault();
-      var href = $(this).attr('href');
+			var href = $(this).attr('href');
       var $wrap = $('#ajax-wrap');
-      var topPosition = $(this).offset().top;
-      var leftPosition = $(this).offset().left;
+      var $element = $(this);
+      $(this).click(false);
       $wrap.html('').load(href + " .content-def p", function () {
       	$wrap.children("p").children("img").remove();
-      	$wrap.css({"top":e.pageY, "left":e.pageX - 100});
-        $wrap.show();  
+      	var wrapHtml = $wrap.html();
+      	$element.attr("data-def", wrapHtml);
       });
 		});
-		
-		$(".menu-principal li a").each(function(){
-			//Active menu
-			 if(this.href == window.location.href){
-			 	$(this).addClass("active");
-			 }
+
+		$elementClick.mouseenter(function(event){
+			showTooltip($(this), event)
+		});
+		$elementClick.mouseleave(function(event){
+			hideTooltip($(this));
 		});
 
 		// $(".menu-principal li a").mouseenter(function(){
@@ -89,7 +84,6 @@ $(document).ready(function(){
 		});
 	}    
 
-
 	// Open definition in text page 
 	function OpenPopupInTextPage($link, $this) {
 		$dialogText.dialog({
@@ -110,6 +104,34 @@ $(document).ready(function(){
         $dialogText.dialog("close");
     	}
 		});
-	}            
+	}  
+ 
+	function showTooltip($element, event) {
+		var addHtml = $element.attr("data-def");
+	  $('.tooltip-definition').remove();
+	  $('body').append("<div class='tooltip-definition'>" + addHtml + "</div>");
+	  var tooltipX = event.pageX - 8;
+	  var tooltipY = event.pageY + 8;
+	  $('.tooltip-definition').css({top: tooltipY, left: tooltipX});
+    
+    //remove title when hover
+    var title = $element.attr("title");
+    $element.attr("tmp_title", title);
+    $element.attr("title","");
+	};
+ 
+	function hideTooltip($this) {
+	   $('.tooltip-definition').remove();
+    //Rajouter le title 
+    var title = $this.attr("tmp_title");
+    $this.attr("title", title);
+	};
+		
+	$(".menu-principal li a").each(function(){
+		//Active menu
+		 if(this.href == window.location.href){
+		 	$(this).addClass("active");
+		 }
+	});          
 
 });

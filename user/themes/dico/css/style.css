@@ -6871,6 +6871,16 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 /*VARIABLES*/
+.tooltip-definition {
+  margin: 8px;
+  padding: 1rem 2rem;
+  width: 20%;
+  position: absolute;
+  background-color: #FFF;
+  color: #0000D2;
+  border: 3px solid #00FF9A;
+  z-index: 2; }
+
 body {
   font-family: "EB Garamond", serif;
   margin: 0px 0px 50px 0px;
@@ -7035,12 +7045,7 @@ header {
       .page-text .arrow-back a:hover {
         color: #00FF9A; }
   .page-text #ajax-wrap {
-    display: none;
-    width: 40%;
-    position: absolute;
-    background-color: #FFF;
-    color: #0000D2;
-    border: 3px solid #00FF9A; }
+    display: none; }
   .page-text .inner-text {
     width: 75%;
     margin: 50px auto; }
