@@ -6883,6 +6883,19 @@ h1, h2, h3, h4, h5 {
   font-family: "EB Garamond", serif;
   color: #0000D2; }
 
+h6 {
+  font-family: "EB Garamond", serif;
+  font-size: 1em; }
+
+blockquote {
+  border-left: none;
+  padding-top: 0px;
+  padding-left: 2rem; }
+  blockquote p {
+    font-size: 1em !important;
+    color: #0000D2;
+    margin-bottom: 0.8rem; }
+
 a {
   color: #0000D2;
   border-bottom: 3px solid #00FF9A; }
@@ -6926,35 +6939,57 @@ p a:hover {
     font-size: 2.3em;
     letter-spacing: 0.02em; }
 
-.menu-principal ul {
-  margin-left: 17.4%;
-  padding: 20px 0px 20px 0px; }
-  .menu-principal ul li {
-    font-size: 1.5em;
-    color: #0000D2;
-    font-weight: bold;
-    letter-spacing: 0.1em; }
-    .menu-principal ul li:hover {
-      box-shadow: 0px 0px 30px #FF2E74; }
-    .menu-principal ul li.active {
-      box-shadow: 0px 0px 30px #FF2E74; }
-    .menu-principal ul li a {
+.menu-principal {
+  width: 66.66667%;
+  margin: auto; }
+  .menu-principal ul {
+    padding: 20px 0px 20px 0px; }
+    .menu-principal ul li {
+      font-size: 1.5em;
       color: #0000D2;
-      border: 3px solid #00FF9A;
-      padding: 10px 25px; }
-  .menu-principal ul .submenu {
-    position: absolute;
-    z-index: 999;
-    margin: 0 0 0 0;
-    display: none; }
-    .menu-principal ul .submenu li a {
-      background-color: #00FF9A;
-      font-size: 1.2rem; }
-      .menu-principal ul .submenu li a.active {
-        box-shadow: 0px 0px 30px #FF2E74; }
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin-top: 1rem; }
+      .menu-principal ul li a {
+        color: #0000D2;
+        border: 3px solid #00FF9A;
+        padding: 10px 25px; }
+        .menu-principal ul li a:hover {
+          box-shadow: 0px 0px 30px #FF2E74; }
+        .menu-principal ul li a.active {
+          box-shadow: 0px 0px 30px #FF2E74; }
+    .menu-principal ul .submenu {
+      position: absolute;
+      z-index: 999;
+      margin: 0 0 0 0;
+      padding-top: 3px;
+      display: none; }
+      .menu-principal ul .submenu li {
+        list-style: none;
+        margin-top: 0px; }
+        .menu-principal ul .submenu li a {
+          background-color: #00FF9A;
+          font-size: 1.2rem; }
+          .menu-principal ul .submenu li a:hover, .menu-principal ul .submenu li a.active {
+            box-shadow: none;
+            color: #FF2E74; }
 
 .menu-principal li:hover ul {
   display: block; }
+
+#breadcrumbs {
+  width: 66.666667%;
+  margin: auto; }
+  #breadcrumbs a {
+    border-bottom: none; }
+    #breadcrumbs a span {
+      border-bottom: none; }
+    #breadcrumbs a:hover {
+      border-bottom: 3px solid #00FF9A; }
+  #breadcrumbs span {
+    border-bottom: 3px solid #00FF9A;
+    line-height: 1.3em;
+    color: #0000D2; }
 
 header {
   position: relative; }
@@ -6976,7 +7011,36 @@ header {
 .page-text {
   border: 3px solid #00FF9A;
   margin: 10px auto 60px auto;
-  width: 66.66667%; }
+  width: 66.66667%;
+  position: relative; }
+  .page-text .submenu-page {
+    width: 75%;
+    margin: 3rem auto 0px auto; }
+    .page-text .submenu-page li {
+      margin: 0px 1rem 1rem 0px; }
+      .page-text .submenu-page li a {
+        background-color: #00FF9A;
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem; }
+        .page-text .submenu-page li a:hover, .page-text .submenu-page li a.active {
+          box-shadow: none;
+          color: #FF2E74; }
+  .page-text .arrow-back {
+    position: absolute;
+    top: 0;
+    left: 2rem; }
+    .page-text .arrow-back a {
+      border: none;
+      font-size: 3em; }
+      .page-text .arrow-back a:hover {
+        color: #00FF9A; }
+  .page-text #ajax-wrap {
+    display: none;
+    width: 40%;
+    position: absolute;
+    background-color: #FFF;
+    color: #0000D2;
+    border: 3px solid #00FF9A; }
   .page-text .inner-text {
     width: 75%;
     margin: 50px auto; }
@@ -7057,6 +7121,10 @@ nav.definition-list {
       nav.definition-list ul li a {
         padding-top: 10px;
         width: 100%; }
+        nav.definition-list ul li a img {
+          width: 60%;
+          display: block;
+          margin: auto; }
       nav.definition-list ul li h3 {
         font-size: 1.8em;
         color: #0000D2; }

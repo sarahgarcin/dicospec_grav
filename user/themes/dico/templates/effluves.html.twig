@@ -3,13 +3,16 @@
 {% block content %}
 <div class="page row">
 	{% include 'partials/header.html.twig' %}
+	{% include 'partials/breadcrumbs.html.twig' %}
 	<div class="page-text">
-		<div id="dialog-text"></div>
+		<div class="arrow-back"><a href="{{ page.parent.url }}" title="retour">←</a></div>
+		<!-- <div id="dialog-text"></div> -->
+		<div id="ajax-wrap"></div>
 		<div class="inner-text">
 			{{ page.content }}
 		</div>	
 	</div>
-	<div id="dialog"></div>
+	<!-- <div id="dialog"></div> -->
 	<nav class="definition-list effluves" id="mini-dico">
 	 <h2>Le mini dico du spectateur du {{page.title}}</h2>
 	 {{definition}}

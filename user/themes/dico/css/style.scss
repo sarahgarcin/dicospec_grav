@@ -35,7 +35,22 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: "EB Garamond", serif;
   color:$text;
+}
 
+h6{
+  font-family: "EB Garamond", serif;
+  font-size: 1em;
+}
+
+blockquote{
+  border-left:none;
+  padding-top: 0px;
+  padding-left: 2rem;
+  p{
+    font-size: 1em !important;
+    color: $text;
+    margin-bottom: 0.8rem;
+  }
 }
 
 a {
@@ -104,33 +119,29 @@ p{
     }
 
   }
-
-  // .home-right{
-  //   margin-top: 60px;
-    
-  // }
 }
-
-
 .menu-principal {
+  width: 66.66667%;
+  margin:auto;
   ul{
-    margin-left: 17.4%;
+    // margin-left: 17.4%;
     padding: 20px 0px 20px 0px;
     li{
     font-size: 1.5em;
     color: $text;
     font-weight: bold;
     letter-spacing: 0.1em;
-    &:hover{
-      box-shadow:  0px 0px 30px $rose;
-    }
-    &.active{
-      box-shadow:  0px 0px 30px $rose;
-    } 
+    margin-top: 1rem;
     a {
       color: $text;
       border: 3px solid $vert;
       padding: 10px 25px;
+      &:hover{
+        box-shadow:  0px 0px 30px $rose;
+      }
+      &.active{
+        box-shadow:  0px 0px 30px $rose;
+      } 
     }
   }
   
@@ -138,21 +149,17 @@ p{
       position:absolute;
       z-index: 999;
       margin: 0 0 0 0;
+      padding-top: 3px;
       display: none;
       li{
+        list-style: none;
+        margin-top: 0px;
         a{
-          //border:none;
           background-color: $vert;
-          //width: 10vw;
           font-size: 1.2rem;
-          &:hover{
-            //box-shadow: 0px 0px 30px $rose;
-            //box-shadow:  none;
-            //color: $rose;
-            //text-decoration: underline;
-          }
-          &.active{
-            box-shadow: 0px 0px 30px $rose;
+          &:hover, &.active{
+            box-shadow: none;
+            color:$rose;
           }
         }
       }
@@ -162,6 +169,25 @@ p{
 
 .menu-principal li:hover ul {
     display: block;
+}
+
+#breadcrumbs{
+  width:66.666667%;
+  margin:auto;
+  a{
+    border-bottom: none;
+    span{
+      border-bottom:none;
+    }
+    &:hover{
+      border-bottom: 3px solid $vert;
+    }
+  }
+  span{
+    border-bottom: 3px solid $vert;
+    line-height: 1.3em;
+    color:$text;
+  }
 }
 
 // PAGE STATIC
@@ -201,6 +227,43 @@ header {
   border: 3px solid $vert;
   margin: 10px auto 60px auto;
   width: 66.66667%;
+  position: relative;
+  //sous-menu par partie
+  .submenu-page{
+    width: 75%;
+    margin: 3rem auto 0px auto;
+    li{ 
+      margin: 0px 1rem 1rem 0px;
+      a{
+        background-color: $vert;
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        &:hover, &.active{ box-shadow: none; color:$rose; }
+      }
+    }
+  }
+  //flèche de retour en arrière
+  .arrow-back{
+    position: absolute;
+    top:0;
+    left:2rem;
+    a{
+      border:none;
+      font-size: 3em;
+      &:hover{
+        color:$vert;
+      }
+    }
+  }
+  //div qui affiche les définitions au survol
+  #ajax-wrap{
+    display: none; 
+    width: 40%;
+    position:absolute;
+    background-color: #FFF;
+    color: $text;
+    border: 3px solid $vert;
+  } 
   .inner-text{
     width: 75%;
     margin: 50px auto;
@@ -272,8 +335,6 @@ nav.definition-list {
     margin:auto;
     li{
       width: 31%;
-      // margin-left: 0px;
-      // margin-right: 24px;
     }
   }
   ul {
@@ -305,6 +366,11 @@ nav.definition-list {
       a{
         padding-top: 10px;
         width: 100%;
+        img{
+          width:60%;
+          display: block;
+          margin: auto;
+        }
       }
       h3{
         font-size: 1.8em;
@@ -314,12 +380,6 @@ nav.definition-list {
         color: $text;
         font-size: 1.2em;
         line-height: 1.4em;
-        // display: none;
-        // position: absolute;
-        // background: #fff;
-        // border: 3px solid $vert;
-        // padding: 10px 20px;
-        // z-index: 99;
         text-align: left;
       }
     }

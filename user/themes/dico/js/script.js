@@ -26,12 +26,28 @@ $(document).ready(function(){
 			return false;
 		});
 
-		$elementClick.on('click', function(e) {
-			//open pop on definition click In text pge
-			OpenPopupInTextPage($(this).attr('href'), $(this));
-			return false;
+		// $elementClick.on('click', function(e) {
+		// 	//open pop on definition click In text pge
+		// 	OpenPopupInTextPage($(this).attr('href'), $(this));
+		// 	return false;
+		// });
+
+		$elementClick.each(function(e){
+			console.log($(this));
 		});
 
+		$elementClick.hover(function(e){
+			e.preventDefault();
+      var href = $(this).attr('href');
+      var $wrap = $('#ajax-wrap');
+      var topPosition = $(this).offset().top;
+      var leftPosition = $(this).offset().left;
+      $wrap.html('').load(href + " .content-def p", function () {
+      	$wrap.children("p").children("img").remove();
+      	$wrap.css({"top":e.pageY, "left":e.pageX - 100});
+        $wrap.show();  
+      });
+		});
 		
 		$(".menu-principal li a").each(function(){
 			//Active menu

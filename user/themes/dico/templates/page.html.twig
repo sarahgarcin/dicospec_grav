@@ -3,7 +3,11 @@
 {% block content %} 
   <header id="header">
     <div class="def-title">
-      <h1>{{ page.title }}</h1>
+    {% if page.header.spectateur is not empty%}
+      <h1>{{ page.header.spectateur}}</h1>   
+    {% else %}
+      <h1>{{ page.title}}</h1>
+    {% endif %}
     </div>
   </header><!-- /header#header -->
 

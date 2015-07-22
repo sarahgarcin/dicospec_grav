@@ -64,7 +64,7 @@ class DefinitionPlugin extends Plugin{
         $first_let = (is_numeric(strtoupper(substr($titre,0,1))) ? '#' : strtoupper(substr($titre,0,1)));
         if ($cur_let !== $first_let){
           $cur_let = $first_let;
-          $letter = '<li class="letter item">' . $cur_let . '</li>';
+          $letter = '<li class="letter item"><span>' . $cur_let . '</span></li>';
           $html .= $letter;
         }
         $html .= '<li class="definition item"><a href="' . $page->url(). '" title="' . $titre .'"><h3>' . $titre . '</h3><p>' . $excerpt . '</p></a></li>';

@@ -4,6 +4,17 @@
 <div class="page row">
 	{% include 'partials/header.html.twig' %}
 	<div class="page-text">
+	 {% if page.children is not empty %}
+    	{% if page.title is not sameas("Définitions") %}
+        <ul class="submenu-page inline-list">
+        {% for child in page.children %}
+          <li class="submenu-page-list">
+          	<a href="{{ child.url }}">{{ child.menu }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+      {% endif %}
 		<div class="inner-text">
 			{{ page.content }}
 		</div>	
