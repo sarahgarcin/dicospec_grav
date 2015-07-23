@@ -14,9 +14,13 @@
 	</div>
 	<!-- <div id="dialog"></div> -->
 	<nav class="definition-list effluves" id="mini-dico">
-	 <h2>Le mini dico du spectateur du {{page.title}}</h2>
+	 <h2>Le mini dico du spectateur&#8239;: {{page.title}}</h2>
 	 {{definition}}
 	</nav> 
-	{{credits}}
+	{% for child in page.children %}
+		{% if child.name is sameas("credits.md") %}
+			{{credits}}
+		{% endif %}
+	{% endfor %}
 </div>
 {% endblock %}

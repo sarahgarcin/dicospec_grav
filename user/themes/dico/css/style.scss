@@ -10,9 +10,11 @@
 //fonts
 @import "../bower_components/foundation/scss/normalize.scss";
 @import "../bower_components/foundation/scss/foundation.scss";
-@import "http://fonts.googleapis.com/css?family=Roboto";
-@import "http://fonts.googleapis.com/css?family=Share";
-@import "http://fonts.googleapis.com/css?family=EB+Garamond";
+// @import "http://fonts.googleapis.com/css?family=Roboto";
+// @import "http://fonts.googleapis.com/css?family=EB+Garamond";
+// @import "http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic";
+@import "http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700";
+@import "http://fonts.googleapis.com/css?family=Amiri:400italic,700italic,400,700";
 
 /*VARIABLES*/
 
@@ -22,20 +24,10 @@ $bleuclair:#00E5B0 ;
 $blanc : #FFF;
 $rose: #FF2E74;
 $vert: #00FF9A;
-
-.tooltip-definition{
-  margin:8px;
-  padding:1rem 2rem;
-  width: 20%;
-  position:absolute;
-  background-color: #FFF;
-  color: $text;
-  border: 3px solid $vert;
-  z-index: 2;
-}
+$font-family: "Amiri";
 
 body {
-  font-family: "EB Garamond", serif;
+  font-family: $font-family, serif;
   margin: 0px 0px 50px 0px;
   background-color: $background;
   color:$text;
@@ -44,12 +36,12 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "EB Garamond", serif;
+  font-family: $font-family, serif;
   color:$text;
 }
 
 h6{
-  font-family: "EB Garamond", serif;
+  font-family: $font-family, serif;
   font-size: 1em;
 }
 
@@ -66,6 +58,7 @@ blockquote{
 
 a {
   color: $text;
+  position: relative;
   border-bottom: 3px solid $vert;
 }
 
@@ -93,12 +86,24 @@ p{
   opacity: 0.5;
   height: 4000px;
   z-index: -1;
-  // display: none;
+  display: none;
 }
 
 .grid{
   height:2000px;
   border-right: 3px solid green;
+}
+
+//div qu'il s'affiche au survol des définitions
+.tooltip-definition{
+  margin:8px;
+  padding:1rem 2rem;
+  width: 20%;
+  position:absolute;
+  background-color: #FFF;
+  color: $text;
+  border: 3px solid $vert;
+  z-index: 2;
 }
 
 // HOME
@@ -196,7 +201,7 @@ p{
   }
   span{
     border-bottom: 3px solid $vert;
-    line-height: 1.3em;
+    line-height: 1.8em;
     color:$text;
   }
 }
@@ -277,6 +282,16 @@ header {
       font-size: 1.5em;
       line-height: 1.4em;
       text-align: justify;
+    }
+    a{border:none;}
+    a:after{
+      content:"";
+      position: absolute;
+      width:100%;
+      height: 0;
+      left:0;
+      bottom:4px;
+      border-bottom: 3px solid $vert;
     }
   }
 }
@@ -453,6 +468,74 @@ footer {
   &.row{
     margin-left: 10%;
   }
+}
+
+@media #{$large-only} {
+  $text-size:1.2em;
+  $text-line: 1.4em;
+  h1{font-size: 2rem;}
+  h2{font-size: 1.8rem;}
+  h3{font-size:1.2rem;}
+  .tooltip-definition{padding:0.8rem 1.5rem; width: 30%;}
+  .menu-principal{
+    ul{
+      li{font-size: 1em; margin:1rem 0px 0px 1rem;
+        a{padding: 5px 15px;}
+        .submenu{ 
+          li{margin-left: 0px;
+            a{font-size:0.8em;}
+          }
+        }
+      }
+    }
+  }
+  .page-text{
+    .arrow-back{
+      top:0.7rem;left:1.5rem;
+      a{font-size:1.5em;}
+    }
+    .inner-text{
+      margin: 35px auto;
+      h2{font-size: 1.8rem;}
+      p{font-size:$text-size;line-height:$text-line; }
+    }
+    .submenu-page{
+      li{ margin: 0px 0.8rem 0.8rem 0px;
+        a{font-size: 0.8em; padding: 5px 10px;}
+      }
+    }
+  }
+  nav.definition-list{
+    ul{
+      li{
+        width:22%;height:190px; margin: 16px;padding:5px 20px;
+        h3{font-size: 1.5em;}
+        p{font-size: 1em; line-height:1.25em;}
+      }
+    }
+  }
+
+  //design des pop up
+  .ui-dialog{
+    .ui-button{
+      margin-bottom: 0px;
+    }
+    #content{
+      margin-left: 0px;
+      p{font-size: 1em; line-height: 1.2em;}
+    }
+  }
+
+  nav.definition-list.effluves{
+    li{width:30%; margin:12px 24px 12px 0px;}
+  }
+
+  .credits.effluves{
+    .credits-text{
+      p{font-size: $text-size; line-height: $text-line;}
+    }
+  }
+
 }
 
 @media #{$small-only} { 
