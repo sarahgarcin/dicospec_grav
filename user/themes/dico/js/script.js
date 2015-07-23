@@ -51,13 +51,13 @@ $(document).ready(function(){
 			hideTooltip($(this));
 		});
 
-		// $(".menu-principal li a").mouseenter(function(){
+		$(".menu-principal li a").each(function(){
+			//Active menu
+			if(this.href == window.location.href){
+				$(this).addClass("active");
+			}
+		}); 
 
-		// 	$(this).parent().children(".submenu").slideDown("fast");
-		// });
-		// $(".menu-principal li a").mouseleave(function(){
-		// 	$(this).parent().children(".submenu").slideUp("fast");
-		// });
 	}
 
 
@@ -72,8 +72,10 @@ $(document).ready(function(){
     	// height: $popHeight,
     	width: $popWidth,  
 	 	});
-	 	$dialog.load($link + " .container");
-		$dialog.dialog('open');
+	 	$dialog.load($link + " .container", function(){
+	 		$dialog.dialog('open');
+	 	});
+		
 
 
 		//Close Pop when click outside
@@ -83,28 +85,6 @@ $(document).ready(function(){
     	}
 		});
 	}    
-
-	// Open definition in text page 
-	function OpenPopupInTextPage($link, $this) {
-		$dialogText.dialog({
-    	autoOpen: false,
-    	appendTo: ".container",
-    	position: { my: "right-30", at: "right", of: window },
-    	closeText: "x",
-    	modal: true,
-    	width: $popWidth,
-	 	});
-	 	$dialogText.load($link + " .container");
-		$dialogText.dialog('open');
-
-
-		//Close Pop when click outside
-		$('body').on('mousedown', function (e){
-    	if (!$dialogText.is(e.target) && $dialogText.has(e.target).length === 0){
-        $dialogText.dialog("close");
-    	}
-		});
-	}  
  
 	function showTooltip($element, event) {
 		var addHtml = $element.attr("data-def");
@@ -126,12 +106,28 @@ $(document).ready(function(){
     var title = $this.attr("tmp_title");
     $this.attr("title", title);
 	};
-		
-	$(".menu-principal li a").each(function(){
-		//Active menu
-		 if(this.href == window.location.href){
-		 	$(this).addClass("active");
-		 }
-	});          
+
+	// Open definition in text page 
+	//I don't use this function
+	function OpenPopupInTextPage($link, $this) {
+		$dialogText.dialog({
+    	autoOpen: false,
+    	appendTo: ".container",
+    	position: { my: "right-30", at: "right", of: window },
+    	closeText: "x",
+    	modal: true,
+    	width: $popWidth,
+	 	});
+	 	$dialogText.load($link + " .container");
+		$dialogText.dialog('open');
+
+
+		//Close Pop when click outside
+		$('body').on('mousedown', function (e){
+    	if (!$dialogText.is(e.target) && $dialogText.has(e.target).length === 0){
+        $dialogText.dialog("close");
+    	}
+		});
+	}           
 
 });
