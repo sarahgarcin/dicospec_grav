@@ -3,7 +3,13 @@
 {% block content %}
 <div class="page row">
 	{% include 'partials/header.html.twig' %}
+  {% if page.parent.title is not sameas("Pages") %}
+    {% include 'partials/breadcrumbs.html.twig' %}
+  {% endif %}
 	<div class="page-text">
+    {% if page.parent.title is not sameas("Pages") %}
+      <div class="arrow-back"><a href="{{ page.parent.url }}" title="retour">←</a></div>
+    {% endif %}
     {% if page.children is not empty %}
     	{% if page.title is not sameas("Définitions") %}
         <ul class="submenu-page inline-list">
