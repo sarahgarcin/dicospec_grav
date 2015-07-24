@@ -6890,10 +6890,16 @@ blockquote {
   border-left: none;
   padding-top: 0px;
   padding-left: 2rem; }
-  blockquote p {
-    font-size: 1em !important;
+  blockquote h6 {
+    margin-bottom: 0.8rem;
     color: #0000D2;
-    margin-bottom: 0.8rem; }
+    font-size: 1em !important;
+    line-height: 1.2em; }
+  blockquote p {
+    margin-bottom: 0.8rem;
+    color: #0000D2;
+    font-size: 1em !important;
+    line-height: 1.2em; }
 
 a {
   color: #0000D2;
@@ -7006,6 +7012,8 @@ header {
   position: relative; }
   header.header-page {
     margin: 0px 0px 3rem 0px; }
+    header.header-page .page-title {
+      width: 10%; }
     header.header-page .page-navigation {
       width: 100%; }
   header .inner-header .title a {
@@ -7147,7 +7155,7 @@ nav.definition-list {
       nav.definition-list ul li p {
         color: #0000D2;
         font-size: 1.2em;
-        line-height: 1.4em;
+        line-height: 1.3em;
         text-align: left; }
 
 [class*="column"] + [class*="column"]:last-child {
@@ -7202,6 +7210,13 @@ footer.row {
   h3 {
     font-size: 1.2rem; }
 
+  h6 {
+    font-size: 0.8rem; }
+
+  blockquote h6, blockquote p {
+    font-size: 0.8em !important;
+    line-height: 1.2em; }
+
   .tooltip-definition {
     padding: 0.8rem 1.5rem;
     width: 30%; }
@@ -7247,6 +7262,8 @@ footer.row {
 
   .ui-dialog .ui-button {
     margin-bottom: 0px; }
+  .ui-dialog header {
+    margin: 0px 0px 0px 0px; }
   .ui-dialog #content {
     margin-left: 0px; }
     .ui-dialog #content p {

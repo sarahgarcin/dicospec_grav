@@ -4,7 +4,7 @@
 <div class="page row">
 	{% include 'partials/header.html.twig' %}
 	<div class="page-text">
-	 {% if page.children is not empty %}
+    {% if page.children is not empty %}
     	{% if page.title is not sameas("Définitions") %}
         <ul class="submenu-page inline-list">
         {% for child in page.children %}
