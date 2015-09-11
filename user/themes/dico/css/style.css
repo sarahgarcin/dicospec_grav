@@ -7062,16 +7062,6 @@ header {
       font-size: 1.5em;
       line-height: 1.4em;
       text-align: justify; }
-    .page-text .inner-text a {
-      border: none; }
-    .page-text .inner-text a:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 0;
-      left: 0;
-      bottom: 4px;
-      border-bottom: 3px solid #00FF9A; }
 
 .credits.effluves {
   border: 3px solid #00FF9A;
