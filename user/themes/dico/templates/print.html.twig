@@ -1,0 +1,23 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<div class="print-page row">
+	<div class="couv">
+		<img src="{{ theme_url }}/images/title.png" alt="title">
+	</div>
+	<div class="couv-deux">
+		<img src="{{ theme_url }}/images/title.png" alt="title">
+	</div>
+	<div class="about">
+		{{aboutprint}}
+	</div>
+	{# {{page.content}} #}
+  <div class="definition-list-print">
+    {{definitionprint}}
+  </div> 
+
+   <div class="couvend">
+    {{couvendprint}}
+  </div> 
+</div> 
+{% endblock %}

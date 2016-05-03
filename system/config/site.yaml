@@ -2,7 +2,7 @@ title: Grav                                 # Name of the site
 author:
   name: John Appleseed                      # Default author name
   email: 'john@email.com'                   # Default author email
-taxonomies: [category,tag]                  # Arbitrary list of taxonomy types
+taxonomies: [category,tag, print]                  # Arbitrary list of taxonomy types
 blog:
   route: '/blog'                            # Route to blog
 metadata:
